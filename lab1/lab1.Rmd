@@ -1,0 +1,88 @@
+---
+title: "Lab 1"
+author: "Adam Orr"
+date: "August 31, 2017"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(results = "hold", fig.show = "hold")
+knitr::read_chunk('lab1.R')
+```
+
+## Question 1
+###Script
+```{r question 1, eval = FALSE}
+```
+
+###Output
+```{r question 1, echo = FALSE}
+```
+
+###Answers
+####Do red deer appear to have an equal sex ratio at birth?
+The ratio appears to be equal to .5, but to check we should do a binomial test.
+```{r Q1_question}
+binom.test(sum(females),sum(c(females,males)))
+```
+With a p-value of 1, we cannot reject the null hypothesis that the true sex ratio is .5
+
+## Question 2
+###Script
+```{r question 2, eval = FALSE}
+```
+###Output
+```{r question 2, echo = FALSE}
+```
+
+###Answers
+####Does BMI appear to depend on weight?
+No, BMI does not appear to depend on weight. In this dataset, there is no clear correlation.
+
+## Question 3
+###Script
+```{r question 3, eval = FALSE}
+```
+###Output
+```{r question 3, echo = FALSE}
+```
+
+###Answers
+####How do the two plots compare?
+The first plot shows a curve, which appears to be a logarithmic decrease in concentration over time. 
+The second plot shows that the decrease is linear after a log transform.
+
+## Question 4
+###Script
+```{r question 4, eval = FALSE}
+```
+###Output
+```{r question 4, echo = FALSE}
+```
+
+###Answers
+####Does one sex seem bigger?
+Females seem larger than males. To test this we can use a t-test.
+```{r Q4_question}
+t.test(femaleweight,maleweight, alternative="greater")
+```
+The T-test supports the assertion that females are bigger than males.
+
+
+## Question 5
+###Script
+```{r question 5, eval = FALSE}
+```
+###Output
+```{r question 5, echo = FALSE}
+```
+
+###Answers
+####Based on these plots, what can you say about the usefulness of nose pigmentation for estimating lion age?
+Nose pigmentation is a good estimator of lion age for male lions, but not for female lions.
+
+
