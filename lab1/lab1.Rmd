@@ -5,14 +5,15 @@ date: "August 31, 2017"
 output:
   pdf_document: default
   html_document: default
+section: '91973'
 ---
-
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(results = "hold", fig.show = "hold")
 knitr::read_chunk('lab1.R')
 ```
+
+Section 91973
 
 ## Question 1
 ###Script
@@ -70,7 +71,7 @@ Females seem larger than males. To test this we can use a t-test.
 ```{r Q4_question}
 t.test(femaleweight,maleweight, alternative="greater")
 ```
-The T-test supports the assertion that females are bigger than males.
+The t-test supports the assertion that females are bigger than males.
 
 
 ## Question 5
