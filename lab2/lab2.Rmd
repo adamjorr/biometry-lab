@@ -3,9 +3,9 @@ title: "Lab 2"
 author: "Adam Orr"
 date: "September 7, 2017"
 output:
+  word_document: default
   pdf_document: default
   html_document: default
-  word_document: default
 section: 91973 Friday 9am
 code: lab2.R
 ---
