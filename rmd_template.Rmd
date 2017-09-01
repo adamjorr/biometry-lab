@@ -1,0 +1,69 @@
+---
+title: "Lab X"
+author: "Adam Orr"
+date: "September 7, 2017"
+code: "labX.R"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(results = "hold", fig.show = "hold")
+knitr::read_chunk(rmarkdown::metadata$code)
+```
+
+## Question 1
+###Script
+```{r question 1, eval = FALSE}
+```
+
+###Output
+```{r question 1, echo = FALSE}
+```
+
+###Answers
+
+## Question 2
+###Script
+```{r question 2, eval = FALSE}
+```
+###Output
+```{r question 2, echo = FALSE}
+```
+
+###Answers
+
+
+## Question 3
+###Script
+```{r question 3, eval = FALSE}
+```
+###Output
+```{r question 3, echo = FALSE}
+```
+
+###Answers
+
+## Question 4
+###Script
+```{r question 4, eval = FALSE}
+```
+###Output
+```{r question 4, echo = FALSE}
+```
+
+###Answers
+
+## Question 5
+###Script
+```{r question 5, eval = FALSE}
+```
+###Output
+```{r question 5, echo = FALSE}
+```
+
+###Answers
+
