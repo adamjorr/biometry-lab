@@ -2,10 +2,12 @@
 title: "Lab 2"
 author: "Adam Orr"
 date: "September 7, 2017"
-code: "lab2.R"
 output:
   pdf_document: default
   html_document: default
+  word_document: default
+section: 91973 Friday 9am
+code: lab2.R
 ---
 
 
@@ -14,6 +16,8 @@ output:
 knitr::opts_chunk$set(results = "hold", fig.show = "hold")
 knitr::read_chunk(rmarkdown::metadata$code)
 ```
+
+Section: `r rmarkdown::metadata$section`
 
 ## Question 1
 ###Script
@@ -26,11 +30,11 @@ knitr::read_chunk(rmarkdown::metadata$code)
 
 ###Answers
 ####What are five of the possible combinations with three females and six males? Pick any five you please.
-
-```{r Q1_question}
-females <- c(rep(TRUE, 3),rep(FALSE, 6))
-replicate(5,sample(females,9),simplify = FALSE)
-```
+ * FFFMMMMMM
+ * MFFFMMMMM
+ * MMFFFMMMM
+ * MMMFFFMMM
+ * FMFMFMMMM
 
 ## Question 2
 ###Script
@@ -53,9 +57,10 @@ replicate(5,sample(females,9),simplify = FALSE)
 
 ###Answers
 ####What happens to the mean and variance of the distribution as the probability changes?
+As the probability increases, the mean increases as well. On the other hand, the variance until `p = .5`, then decreases again.
 
 ####At what value is the variance of the distribution highest? Lowest?
-
+The variance of the distribution is highest when `p = .5`. The variance is lowest when `p = .1` or `p = .9`.
 
 ## Question 4
 ###Script
@@ -82,21 +87,24 @@ Each bar of the cumulative plot is the height of that bar in the distribution pl
 
 ## Question 6
 ###Script
-```{r question 5, eval = FALSE}
+```{r question 6, eval = FALSE}
 ```
 ###Output
-```{r question 5, echo = FALSE}
+```{r question 6, echo = FALSE}
 ```
 
 ###Answers
 
 ## Question 7
 ###Script
-```{r question 5, eval = FALSE}
+```{r question 7, eval = FALSE}
 ```
 ###Output
-```{r question 5, echo = FALSE}
+```{r question 7, echo = FALSE}
 ```
 
 ###Answers
+####Compare the average you calculated here with the mean you calculated in question 3. Do you expect them to be the same? Why or why not?
+The average I calculated is `r mean(vals)`, which is very close to the average I calculated in question 3, `r p * total`. I do not expect these values to be the same due to the stochastic nature of the experiments.
+
 
