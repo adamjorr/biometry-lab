@@ -13,7 +13,7 @@ code: lab2.R
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(results = "hold", fig.show = "hold")
+# knitr::opts_chunk$set(results = "hold", fig.show = "hold")
 knitr::read_chunk(rmarkdown::metadata$code)
 ```
 
@@ -25,7 +25,7 @@ Section: `r rmarkdown::metadata$section`
 ```
 
 ###Output
-```{r question 1, echo = FALSE}
+```{r question 1, echo=5:7}
 ```
 
 ###Answers
@@ -41,7 +41,7 @@ Section: `r rmarkdown::metadata$section`
 ```{r question 2, eval = FALSE}
 ```
 ###Output
-```{r question 2, echo = FALSE}
+```{r question 2, echo=5:7}
 ```
 
 ###Answers
@@ -52,7 +52,7 @@ Section: `r rmarkdown::metadata$section`
 ```{r question 3, eval = FALSE}
 ```
 ###Output
-```{r question 3, echo = FALSE}
+```{r question 3, echo = c(5:12,19)}
 ```
 
 ###Answers
@@ -67,7 +67,7 @@ The variance of the distribution is highest when `p = .5`. The variance is lowes
 ```{r question 4, eval = FALSE}
 ```
 ###Output
-```{r question 4, echo = FALSE}
+```{r question 4, echo = TRUE}
 ```
 
 ###Answers
@@ -80,7 +80,7 @@ Each bar of the cumulative plot is the height of that bar in the distribution pl
 ```{r question 5, eval = FALSE}
 ```
 ###Output
-```{r question 5, echo = FALSE}
+```{r question 5, echo = -1}
 ```
 
 ###Answers
@@ -90,7 +90,7 @@ Each bar of the cumulative plot is the height of that bar in the distribution pl
 ```{r question 6, eval = FALSE}
 ```
 ###Output
-```{r question 6, echo = FALSE}
+```{r question 6, echo = TRUE}
 ```
 
 ###Answers
@@ -100,7 +100,7 @@ Each bar of the cumulative plot is the height of that bar in the distribution pl
 ```{r question 7, eval = FALSE}
 ```
 ###Output
-```{r question 7, echo = FALSE}
+```{r question 7, echo = TRUE}
 ```
 
 ###Answers
