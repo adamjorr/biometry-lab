@@ -3,9 +3,11 @@ title: "Lab X"
 author: "Adam Orr"
 date: "September 7, 2017"
 code: "labX.R"
+section: '91973 Friday 9am'
 output:
   pdf_document: default
   html_document: default
+  word_document: default
 ---
 
 
@@ -13,6 +15,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::read_chunk(rmarkdown::metadata$code)
 ```
+
+Section: `r rmarkdown::metadata$section`
 
 ## Question 1
 ###Script
