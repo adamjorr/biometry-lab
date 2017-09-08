@@ -11,7 +11,6 @@ output:
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(results = "hold", fig.show = "hold")
 knitr::read_chunk(rmarkdown::metadata$code)
 ```
 
