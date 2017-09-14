@@ -186,23 +186,37 @@ legend("topleft",
 #excluded from being spies by this height restriction?
 #assume height follows a normal distribution
 
-#set parameters
-mu <- 177
-sigma <- 7.1
+#set parameters for men
+men_mu <- 177
+men_sigma <- 7.1
 
 #proportion excluded 
-1 - pnorm(180, mu, sigma)
+(p_men_excluded <- 1 - pnorm(180, men_mu, men_sigma))
 
-# ---- question 5 ----
 #the mean height of british women is 163.3 cm,
 #with a standard deviation of 6.4 cm. assuming a normal distribution
 #of female height, what fraction of women meet MI5's  height standard?
 
-#set parameters
-mu <- 163.3
-sigma <- 6.4
+#set parameters for women
+women_mu <- 163.3
+women_sigma <- 6.4
 
-#proportion excluded
-pnorm(173, mu, sigma)
+#fraction of women that meet MI5's height standard
+pnorm(173, women_mu, women_sigma)
+
+#imagine that mi5 wants to change its maximum height for
+#female spies. its goal is to exclude the same proportion
+#of women as men.
+#What should the new maximum height for women be?
+#(round your answer to the nearest centimeter)
+(women_q <- qnorm(1 - p_men_excluded, women_mu, women_sigma))
+round(women_q, 0)
+
+
+
+
+# ---- question 5 ----
+
+
 
 
