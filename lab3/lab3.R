@@ -173,7 +173,7 @@ lines(cdfs[,2]~q, col = 'red')
 lines(cdfs[,3]~q, col = 'blue')
 
 #add legend
-legend("topleft",
+legend("bottomright",
        legend = c("u = 100, o2 = 100", "u = 100, o2 = 400", "u = 100, o2 = 625"),
        col = c('black','red','blue'),
        lty = 1,
@@ -212,11 +212,35 @@ pnorm(173, women_mu, women_sigma)
 (women_q <- qnorm(1 - p_men_excluded, women_mu, women_sigma))
 round(women_q, 0)
 
+#Sean Connery, the original James Bond, is 183 cm tall.
+#By how many standard deviations does he exceed the height
+# limit for spies?
+(183 - men_mu) / (men_sigma)
 
 
 
 # ---- question 5 ----
+#What is the probability that a normal random variable will
+#have a value within 1 standard deviation of the mean?
+1 - 2 * pnorm(-1)
 
+#What is the probability that it will be within 5 standard
+#deviations of the mean?
+1 - 2 * pnorm(-5)
 
+#Fill in the blank: A normal random variable has a 50%
+#probability of lying within ___ standard deviations of
+#the mean
+abs(qnorm(.25))
+
+#Fill in the blank: A normal random variable has a 95%
+#probability of lying within ___ standard deviations of
+#the mean
+abs(qnorm(.025))
+
+#Fill in the blank: A normal random variable has a 99%
+#probability of lying within ___ standard deviations of
+#the mean
+abs(qnorm(.005))
 
 
