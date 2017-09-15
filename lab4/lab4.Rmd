@@ -1,0 +1,122 @@
+---
+title: "Lab 4"
+author: "Adam Orr"
+date: "September 20, 2017"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+section: 91973 Friday 9am
+code: lab4.R
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::read_chunk(rmarkdown::metadata$code)
+```
+
+Section: `r rmarkdown::metadata$section`
+
+## Question 1
+###Script
+```{r question 1, eval = FALSE}
+```
+
+###Output
+```{r question 1, echo = c(1,6,9,12,15,18,21,24,27)}
+```
+
+###Answers
+####Is the estimated mean likely to equal the population parameter? Why or why not?
+The estimated mean is not likely to be exactly equal to the population parameter because the sample is chosen randomly. However, the estimated mean is likely to be somewhat close to the true population parameter.
+
+####Which is a better  descriptor of the variation in length of lizards, the standard deviation or the standard error? Why?
+The variation of the lizard lengths is better described by the standard deviation because it is a description of the variability in our sample. The standard error is a description of the variability of our estimate of the mean.
+
+####Which is a better descriptor of the uncertainty in the estimated mean length of lizards? Why?
+The standard error is a better descriptor of the uncertainty in the estimate of the mean because it describes the standard deviation of the distribution of $\bar{X}$. On the other hand, the standard deviation describes the variability in our sample of lizard lengths.
+
+## Question 2
+###Script
+```{r question 2, eval = FALSE}
+```
+###Output
+```{r question 2, echo = c(1,4)}
+```
+
+###Answers
+
+
+## Question 3
+###Script
+```{r question 3, eval = FALSE}
+```
+###Output
+```{r question 3, echo = c(1,5,9,13)}
+```
+
+###Answers
+####Compare the location and dispersion of the distributions of the three variables: length, average length for a sample of 15, average length for a sample of 25. Interpret the pattern you see to explain why the average is an accurate estimator of the mean, and how sample size effects the quality of the estimate.
+The distributions all have the same location. However, as the sample size increases, the dispersion of the estimate of the mean decreases. Since the distribution of the average has a mean value of the mean of the population, it is an accurate estimator of the mean. This estimate will be more accurate with increasing sample size, as the dispersion of the estimate decreases as the amount of data increases.
+
+
+## Question 4
+###Script
+```{r question 4, eval = FALSE}
+```
+###Output
+```{r question 4, echo = c(1,5,8,11,14,17,18,21)}
+```
+
+###Answers
+####Explain the difference in the probabilities you calculated.
+The first probability describes how often a randomly sampled male will have a horn less than 11mm long, while the second probability describes how often an average of a sample of 10 males is less than 11mm.
+
+####Explain the difference in the probabilities you calculated.
+The first probability describes how often the average of a random sample of 10 males will be larger than 12.5 mm, while the second probability describes how often the average of a random sample of 50 males will be larger than 12.5 mm.
+
+
+## Question 5
+###Script
+```{r question 5, eval = FALSE}
+```
+###Output
+```{r question 5, echo = c(5,8,9,11,13,16,19)}
+```
+
+###Answers
+####Run the script again. Are the boundaries of the confidence interval the same as before? Why or why not?
+No, the boundaries of the confidence interval are not the same as before. This is because the data used to generate the estimates is obtained randomly.
+
+####Did your confidence interval include the true value of the mean? If you repeated this exercise 100 times, roughly how many times would you expect the interval to include the true mean?
+Yes, the confidence interval included the true value of the mean. If I repeated this 100 times, I would expect 95 times would include the true mean.
+
+####Now run your script once again, but first make one change: use a sample size of 90 instead of 10. Compare the new confidence interval to the first one you generated. What happened to the interval when you changed sample size, and why?
+The confidence interval decreased in size. This happened because a larger sample size reduces the standard error of the mean, decreasing the width of the confidence interval.
+
+####Assuming that you did not already know the true value of the mean, which of your two estimates would you trust more, and why?
+I would trust the estimate that was generated using a larger sample size. This is because there is less variance in the distribution of estimates generated using larger sample sizes, so it is more likely to be closer to the true mean.
+
+## Question 6
+###Script
+```{r question 6, eval = FALSE}
+```
+###Output
+```{r question 6, echo = FALSE}
+```
+
+###Answers
+State the expected effect of increasing sample size. All these effects were observed in my own calculations in exercise 5.
+
+####Estimate of the mean weight.
+The estimate of the mean weight would not change.
+
+####Estimate of the variance of weight.
+The estimate of the variance of weight would not change.
+
+####The estimated standard error of the mean weight.
+The estimate of the standard error of the mean weight would decrease.
+
+####The width of the 95% confidence interval.
+The width of the 95% condifence interval would decrease.
