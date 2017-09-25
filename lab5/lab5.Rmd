@@ -60,13 +60,3 @@ Section: `r rmarkdown::metadata$section`
 
 ###Answers
 
-## Question 5
-###Script
-```{r question 5, eval = FALSE}
-```
-###Output
-```{r question 5, echo = FALSE}
-```
-
-###Answers
-
