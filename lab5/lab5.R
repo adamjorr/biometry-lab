@@ -68,7 +68,7 @@ nfemales <- 15
 nmales <- 10
 
 # a. Use the data to estimate the probability p that a reproductive offspring is female.
-phat <- nfemales / total
+(phat <- nfemales / total)
 
 # b. Use the Agresti-Coull method to calculate the 95% confidence interval for p.
 p_prime <- (nfemales + 2)/(total + 4)
