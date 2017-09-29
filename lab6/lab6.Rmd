@@ -1,0 +1,52 @@
+---
+title: "Lab 6"
+author: "Adam Orr"
+date: "September 29, 2017"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+section: 91973 Friday 9am
+code: lab6.R
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::read_chunk(rmarkdown::metadata$code)
+```
+
+Section: `r rmarkdown::metadata$section`
+
+## Question 1
+###Script
+```{r question 1, eval = FALSE}
+```
+
+###Output
+```{r question 1, echo = c(1,11:15,18:21,27:28,31,34:40)}
+```
+
+###Answers
+
+## Question 2
+###Script
+```{r question 2, eval = FALSE}
+```
+###Output
+```{r question 2, echo = c(1:3,10:12,16:20,23:25,31:42)}
+```
+
+###Answers
+
+
+## Question 3
+###Script
+```{r question 3, eval = FALSE}
+```
+###Output
+```{r question 3, echo = c(1,6:8,12:13,17:21,25:40)}
+```
+
+###Answers
+
