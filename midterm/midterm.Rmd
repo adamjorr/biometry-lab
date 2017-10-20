@@ -1,0 +1,91 @@
+---
+title: "Midterm"
+author: "Adam Orr"
+date: "October 12, 2017"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+section: 91973 Friday 9am
+code: midterm.R
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::read_chunk(rmarkdown::metadata$code)
+```
+
+Section: `r rmarkdown::metadata$section`
+
+# Question 1
+##Script
+```{r question 1, eval = FALSE}
+```
+
+##Output
+```{r question 1, echo = c(1,2,7,8,11,14,15,18,19)}
+```
+
+##Answers
+
+# Question 2
+##Script
+```{r question 2, eval = FALSE}
+```
+##Output
+```{r question 2, echo = c(4,7,10,13,16,19,20), fig.width = 7, fig.height= 7}
+```
+
+##Answers
+
+
+# Question 3
+##Script
+```{r question 3, eval = FALSE}
+```
+##Output
+```{r question 3, echo = c(5,8,11)}
+```
+
+##Answers
+
+# Question 4
+##Script
+```{r question 4, eval = FALSE}
+```
+##Output
+```{r question 4, echo = c(5,6,9,10,15:22)}
+```
+
+##Answers
+
+# Question 5
+##Script
+```{r question 5, eval = FALSE}
+```
+##Output
+```{r question 5, echo = c(5:7,9:10,12,13,16:18,20), fig.width = 7, fig.height= 7}
+```
+
+##Answers
+
+# Question 6
+##Script
+```{r question 6, eval = FALSE}
+```
+##Output
+```{r question 6, echo = c(5:15,22,25,28,31:34), fig.width = 7, fig.height= 7}
+```
+
+##Answers
+
+# Question 7
+##Script
+```{r question 7, eval = FALSE}
+```
+##Output
+```{r question 7, echo = c(5:13,16:19), fig.width = 7, fig.height= 7}
+```
+
+##Answers
