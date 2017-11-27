@@ -2,12 +2,16 @@
 title: "Mass Spectrometry Biomarker Discovery"
 author: "Adam Orr"
 date: "November 26, 2017"
-output: html_document
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
 section: 91973 Friday 9am
+code: term_project.R
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::read_chunk(rmarkdown::metadata$code)
 ```
 
 Section: `r rmarkdown::metadata$section`
@@ -35,10 +39,62 @@ Though logistic regression does not assume that residuals are normally or identi
 
 #Results
 
+```{r exact tests, echo = FALSE}
+```
 
+17543 distinct mass to charge ratio peaks were detected in the data. Whether each peak occurred or not was tabulated for each sample, and a Fisher's Exact Test performed. This tests the null hypothesis that the occurrence of the peak is independent of the health status of the donor of the sample. After correction for multiple tests, all p-values equalled 1.
 
+Thus, no significant effect of health on peak presence was detected.
+However, so that additional analyses can be performed for the purpose of this report, uncorrected p-values were considered.
+The uncorrected p-values are plotted below, with a line showing the 0.05 significance level.
 
+```{r plot p values, echo = FALSE}
+```
 
+The number of occurences of a peak with a p-value < 0.05 was then tabulated for each sample and regressed with logistic regression, with the response variable of health status (1 for infected, and 0 for uninfected). There were 93 peaks considered. The results of the regression are shown below, including the parameter estimates and standard errors.
 
+```{r regression 1, echo = FALSE}
+```
 
+The confidence interval of the intercept and the number of peaks is shown below.
 
+```{r regression 2, echo = FALSE}
+```
+
+Notably, the Wald test does not indicate that either parameter is significant. This is apparent in the confidence interval, which includes 0.
+
+The plot below shows the fit of the model to the data.
+
+```{r regression 3, echo = FALSE}
+```
+
+The model appears to fit the data fairly well. An analysis of the residuals plotted against the predicted values (shown below) also indicates a good model fit, as there is no pattern in the residuals and they seem to vary around 0.
+
+```{r regression 4, echo = FALSE}
+```
+
+Logistic regression does not assume residuals are normally distributed; instead, it assumes each residual is binomially distributed, with the p parameter changing over the domain of the model. However, the normal quantile-quantile plot can still be informative in detecting aberrations in the model. Thus, it is plotted below.
+
+```{r regression 5, echo = FALSE}
+```
+
+#Discussion
+
+This analysis concludes that peaks in mass spectrometry data cannot be used to distinguish between healthy donors and those infected with valley fever. However, this analysis was done with only 10 samples of each type of donor, and over 17,000 tests had to be performed. A larger sample size would greatly improve the power of this analysis, and may produce significant findings.
+
+#Appendix
+
+```{r exact tests, echo = TRUE, eval = FALSE}
+```
+```{r plot p values, echo = TRUE, eval = FALSE}
+```
+```{r regression 1, echo = TRUE, eval = FALSE}
+```
+```{r regression 2, echo = TRUE, eval = FALSE}
+```
+```{r regression 3, echo = TRUE, eval = FALSE}
+```
+```{r regression 4, echo = TRUE, eval = FALSE}
+```
+```{r regression 5, echo = TRUE, eval = FALSE}
+```

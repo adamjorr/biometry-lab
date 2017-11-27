@@ -51,11 +51,13 @@ qvals <- p.adjust(pvals) #correct the p values
 #none of our corrected p-values are significant. Oh well. Let's use the
 #uncorrected ones so we have something to do.
 
+# ---- plot p values ----
+
 #plot the p values
 hist(pvals, main = "P-values", xlab = "P")
 abline(v = 0.05) #draw a line for p = 0.05
 
-# ---- regression ----
+# ---- regression 1 ----
 sigpeaks <- subset(peaks, pvals < 0.05) #pick only the significant peaks
 sigdata <- subset(msdata, msdata$mz %in% sigpeaks) #pick only the data for those significant peaks
 sigdata <- subset(sigdata, sigdata$present == T) #pick only the samples that have the significant peak
@@ -64,8 +66,40 @@ numsig <- as.numeric(table(sigdata$sam)) #count number of significant peaks for 
 health <- unique(sigdata[,3:4]) #obtain health status of each sample
 isinfected <- ifelse(health$health == "infected", 1, 0) #get health status as a 1 or 0
 
+#do logistic regression
 mod <- glm(isinfected ~ numsig, family = binomial())
+
+#predict values to plot fit
 pred <- predict(mod, type = "response", newdata = data.frame(numsig = seq(0,100, by = 1)))
 
-plot(isinfected~numsig)
+#show model
+summary(mod)
+
+# ---- regression 2 ----
+#look at 95% confidence interval of parameters
+confint.default(mod)
+
+# ---- regression 3 ----
+
+#plot data and model
+plot(isinfected~numsig,
+     xlab = "Number of Significant Peaks",
+     ylab = "Probability of Infected Donor")
 lines(pred)
+
+# ---- regression 4 ----
+#get residuals
+res <- residuals(mod)
+#get fitted values
+fit <- fitted(mod)
+#Plot the residuals vs. the fitted values.
+plot(res~fit,
+     xlab = "Fitted values",
+     ylab = "Residuals",
+     main = "Residuals vs. Fitted Values")
+
+# ---- regression 5 ----
+#generate qq plot with 1:1 line
+qqnorm(res)
+qqline(res)
+
