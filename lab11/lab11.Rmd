@@ -1,0 +1,49 @@
+---
+title: "Lab 11"
+author: "Adam Orr"
+date: "November 17, 2017"
+output:
+  word_document: default
+  pdf_document:
+    latex_engine: lualatex
+  html_document: default
+section: 91973 Friday 9am
+code: lab11.R
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::read_chunk(rmarkdown::metadata$code)
+```
+
+Section: `r rmarkdown::metadata$section`
+
+## Question 1
+###Script
+```{r question 1, eval = FALSE}
+```
+
+###Output
+```{r question 1, echo = c(1:3,7:17,26,29:38,42:47)}
+```
+
+
+## Question 2
+###Script
+```{r question 2, eval = FALSE}
+```
+###Output
+```{r question 2, echo = c(1:3,9:13,22:25,33,34,36:39,42:45,50,54:63), fig.keep='all'}
+```
+
+
+## Question 3
+###Script
+```{r question 3, eval = FALSE}
+```
+###Output
+```{r question 3, echo = c(1:4,7,10,14,17:24)}
+```
+
+

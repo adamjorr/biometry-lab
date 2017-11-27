@@ -1,0 +1,44 @@
+---
+title: "Mass Spectrometry Biomarker Discovery"
+author: "Adam Orr"
+date: "November 26, 2017"
+output: html_document
+section: 91973 Friday 9am
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Section: `r rmarkdown::metadata$section`
+
+#Introduction
+
+Mass spectrometry is the process of ionizing a sample and sorting its component molecules by mass to charge ratio.
+It is often used to identify the compounds that make up an unknown mixture.
+Some compounds found in human samples may be identifiable in mass spectrometry data, and may be significant indicators of health status.
+In this case, we are interested in developing a diagnostic test to determine if mass spectrometry analysis of human urine can determine whether a person is infected with Valley Fever, a fungal infection of the lungs.
+
+We hypothesize that peaks found in mass spectrometry analysis of human urine are significantly associated with health status. Additionally, we hypothesize that increasing the number of these peaks detected in a sample significantly increases the probability that the donating individual is diseased.
+
+#Methods
+
+We have collected urine samples from 10 individuals affected with Valley Fever, and urine samples from 10 random, non-affected individuals. We then subjected these to a mass spectrometer, yielding a mass to charge ratio for each ion detected in each of the 20 samples.
+
+We then created a contingency table for each peak detected, with the health status of the donor as one variable and whether the peak was present or absent as the other. These contingency tables were then used to perform a Fisher's Exact Test on each peak to test whether the presence of the peak is significantly associated with health status.
+P-values were then corrected for multiple comparisons by Holm's correction. The peaks that had corrected p-values less than 0.05 were collected.
+All corrected p-values were then plotted.
+
+We were interested in whether an increase in the number of significant peaks detected in a sample increased the probability that the individual is infected.
+We therefore performed a logistic regression on the number of significant peaks in each sample and whether the donor was infected or not.
+Though logistic regression does not assume that residuals are normally or identically distributed, the residuals were then plotted against the fitted values to determine if the residuals are nonrandom.
+
+#Results
+
+
+
+
+
+
+
+
